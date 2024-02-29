@@ -1,0 +1,18 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.FAIR:
+    repos:
+      this_repo:
+        commands:
+        - fair-eva.py -ID 1b67c7f4-3cb8-473e-91a9-0191a1fa54a8 -R epos -B https://www.ics-c.epos-eu.org/api/v1
+          --tool_endpoint http://localhost:9090/v1.0/rda/rda_all
+        container: qc.fair_squeaky-russet-lobster
+timeout: 5400
