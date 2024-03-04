@@ -14,5 +14,5 @@ sqa_criteria:
         commands:
         - fair-eva.py -ID 1b67c7f4-3cb8-473e-91a9-0191a1fa54a8 -R epos -B https://www.ics-c.epos-eu.org/api/v1
           --tool_endpoint http://localhost:9090/v1.0/rda/rda_all
-        container: qc.fair_fuzzy-mustard-shrew
+        container: qc.fair_hazy-lilac-zebu
 timeout: 5400
